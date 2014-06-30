@@ -1,0 +1,15 @@
+[submodule "YouCompleteMe"]
+  path = vim/bundle/YouCompleteMe
+  url = git://github.com/Valloric/YouCompleteMe
+[submodule "vim/bundle/YouCompleteMe"]
+	path = vim/bundle/YouCompleteMe
+	url = git://github.com/Valloric/YouCompleteMe.git
+[submodule "vim/bundle/exuberant-ctags"]
+	path = vim/bundle/exuberant-ctags
+	url = git://github.com/mortice/exuberant-ctags.git
+[submodule "vim/bundle/tcomment"]
+	path = vim/bundle/tcomment
+	url = git://github.com/vim-scripts/tComment
+[submodule "vim/bundle/vim-snippets"]
+	path = vim/bundle/vim-snippets
+	url = git://github.com/honza/vim-snippets.vim
