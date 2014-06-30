@@ -20,6 +20,35 @@ call vundle#end()
 filetype plugin indent on
 
 "" Vim settings
+set noswapfile
+set nobackup
+set listchars=""
+set listchars+=trail:.
+noremap <leader>p :set paste<CR>:put *<CR>:set nopaste<CR>
+
+"" Remove trailing whitespace
+noremap <leader>rtw :%s/\s\+$//e<CR>
+
+"" Highlight brackets
+hi MatchParen cterm=bold ctermbg=darkmagenta ctermfg=white
+
+"" Reload .vimrc after editing and saving
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+
+"" Show line
+set cursorline
+
+"" Show line numbers
+set number
+
+"" Yank to Mac OSX clipboard
+set clipboard=unnamed
+
+"" Enable mouse (easier panel switching)
+set mouse=a
+
 set noanti
 set autoindent
 set cindent
@@ -36,9 +65,6 @@ set softtabstop=2
 set smarttab
 set expandtab
 set hlsearch
-set number
-set clipboard=unnamed
-set mouse=a
 
 "" Plugin Configurations
 " Eclim
