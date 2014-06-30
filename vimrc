@@ -20,8 +20,10 @@ call vundle#end()
 filetype plugin indent on
 
 "" Vim settings
+"" Because who cares about swp files, anyway?
 set noswapfile
 set nobackup
+
 set listchars=""
 set listchars+=trail:.
 noremap <leader>p :set paste<CR>:put *<CR>:set nopaste<CR>
@@ -39,6 +41,7 @@ endif
 
 "" Show line
 set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40
 
 "" Show line numbers
 set number
@@ -83,7 +86,7 @@ map <Esc><Space> :NERDTreeToggle<CR>
 
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 
-function s:CloseIfOnlyNerdTreeLeft()
+function! s:CloseIfOnlyNerdTreeLeft()
   if exists("t:NERDTreeBufName")
     if bufwinnr(t:NERDTreeBufName) != -1
       if winnr("$") == 1
