@@ -6,7 +6,7 @@ call vundle#begin()
 
 " Vundle plugins
 Bundle 'gmarik/vundle'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 Bundle 'mortice/exuberant-ctags'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdtree'
@@ -15,6 +15,9 @@ Bundle 'honza/vim-snippets'
 Bundle 'vim-scripts/tcomment'
 Bundle 'dandorman/vim-colors'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'pthrasher/conqueterm-vim'
+Bundle 'othree/html5.vim'
+Bundle 'hhvm/vim-hack'
 
 call vundle#end()
 filetype plugin indent on
@@ -99,9 +102,17 @@ endfunction
 autocmd VimEnter * wincmd p
 
 " Ulti Snips
-let g:UltiSnipsExpandTrigger="<c-k>"
+" " Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
-let g:UltiSnipsJumpBackwardTrigger="<c-m>"
+let g:UltiSnipsJumpBackwardTrigger="<c-n>"
+
+" " If you want :UltiSnipsEdit to split your window.
+" let g:UltiSnipsEditSplit="vertical"
+
+" Set python version
+let g:UltiSnipsUsePythonVersion = 2
 
 "" Colors
 set t_Co=256
