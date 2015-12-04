@@ -6,7 +6,7 @@ call vundle#begin()
 
 " Vundle plugins
 Bundle 'gmarik/vundle'
-" Bundle 'Valloric/YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'mortice/exuberant-ctags'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdtree'
